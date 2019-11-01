@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS --> <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+     <script
+   src="https://code.jquery.com/jquery-3.4.1.min.js"
+   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+   crossorigin="anonymous"></script>
+   
+     <title>Revista</title>
+  
+    <title>Revista</title>
+  </head>
+  <body>
+      <script src="./js/idiomas.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+ 
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="recurso/css/alertify.css">
+<link rel="stylesheet" href="recurso/css/themes/default.css">
+<script src="recurso/alertify.js"></script>
+<script>
+  $(document).ready( function () {
+      $('#table_id').DataTable(  {
+          "scrollY": "350px"
+      } );
+      $('a.toggle-vis').on( 'click', function (e) {
+          e.preventDefault();
+   
+          // Get the column API object
+          var column = table.column( $(this).attr('data-column') );
+   
+          // Toggle the visibility
+          column.visible( ! column.visible() );
+      } );
+      
+      $('#column3_search').on( 'keyup', function () {
+      table
+          .columns( 3 )
+          .search( this.value )
+          .draw();
+  } );
+      
+  } );
+  </script>          
+<header>
+                <div class="container-fluid bg-dark">
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <a class="navbar-brand" href="#">Revista X </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                               
+                                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <div class="navbar-nav ml-auto">
+                                              <a class="nav-item nav-link active" href="#">idiomas <span class="sr-only">(current)</span></a>
+                                              <a class="nav-item nav-link" href="articulos.html">articulos</a>
+                                              <a class="nav-item nav-link" href="traducciones.html">Traducciones</a>
+                                              <a class="nav-item nav-link" href="prueba.html">Listado de Articulos</a>
+
+                                            </div>
+                                          
+                               </div>
+                              </nav>
+                </div>
+        </header>
+        <section class="pr-4 pt-5 pb-3 shadow  rounded">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4  ">
+                      <h1 class="h1 text-center">Registro de idiomas</h1>
+                       <form action="insertar_idiomas.php" id="task-form" method="POST">
+                                          <div class="form-row">
+                                            <div class="col">
+                                              <label for="">Estado</label>
+                                                <input type="text" class="form-control"  id="estado" name="estado" placeholder="Another input">
+                                              </div>
+                                           
+                                          </div><br>
+                                          <div class="form-row">
+                                                   <div class="col">
+                                                     <label for="">Codigo de Idioma</label>
+                                                  <input type="text" class="form-control"  id="codigo" name="codigo" placeholder="Ej:(Es,En,Fr)">
+                                                </div> 
+                                          </div><br>
+                                          <div class="form-row">
+                                            <div class="col">
+                                              <label for="">Nombre de Idioma</label>
+                                                <input type="text" class="form-control"  id="nombre" name="nombre" placeholder="Ej:(Español,Ingles,Frances)">
+
+                                            </div>
+                                           
+                                          </div>
+                                          <br>
+                                          <button id="insertar" class="btn btn-primary form-control">Registrar <i class="far fa-paper-plane"></i></button>
+
+                                        </form>
+                                        <br>
+                       
+                    </div>
+                    <div class="col-md-8 " >
+                     
+                        
+<table id="table_id" class=" table table-sm table-bordered table-responsive">
+    <thead class="">
+    <tr>
+    <th>id</th>
+    <th>Estado</th>
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Operacion</th>
+    </tr>
+    </thead>
+    <tbody id="tabla">
+      </tbody>
+      </table>
+                      
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+  
+  <!-- Modal -->
+    <!-- Optional JavaScript -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Modificar Idioma</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form action="php1/eliminar.php" id="task-form-modal" method="POST">
+           
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Estado</label>
+              <input type="text"id="modal1" class="form-control"  name="modal1" placeholder="Another input">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">codigo</label>
+              <input type="text" id="modal2" class="form-control"  name="modal2" placeholder="Another input">
+            </div>
+            <div class="form-group">
+                    <label for="formGroupExampleInput2">nombre</label>
+                    <input type="text" id="modal3" class="form-control"  name="modal3" placeholder="Another input">
+                  </div>
+                <button id="edit"  class="btn btn-success form-control" data-dismiss="modal">Editar</button>
+                <input type="text" id="modal" name="modal" style="visibility:hidden;">
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle2">Eliminar Idioma</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="./php1/modificar.php"id="task-modal2" method="POST">
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Esta seguro de querer eliminar este idioma</label>
+                <input type="text"id="modal11" class="form-control"  name="modal1" placeholder="Another input">
+              </div>
+              <button  id="elim" class="btn btn-danger form-control" data-dismiss="modal">Eliminar</button>
+                  <input type="text" id="modal1" name="modal" style="visibility:hidden;">
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

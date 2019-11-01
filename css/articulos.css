@@ -1,0 +1,29 @@
+.navbar-brand{
+    padding-left: 8rem;
+}
+.nav-item{
+    padding: 0.9em;
+}
+.nav-link:hover{
+    color:black;
+    
+}
+body{
+   
+    background: linear-gradient(to right top, #21324a, #4c3a6f, #923077, #cf1858, #eb4112);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.container{
+    background: whitesmoke;
+    padding-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 25px 42px rgba(0,0,0,0.2);
+    padding-bottom: 50px;
+    height: 100px;
+}
+.container .row .col-md-4{
+    border-left-color:#000000; 
+}
+
